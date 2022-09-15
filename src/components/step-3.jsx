@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {FaUserAlt} from "react-icons/fa";
+import {FaUserAlt,FaUsers} from "react-icons/fa";
 
 const StepThreeWrapper = styled.div`
 .title_head{
@@ -9,16 +9,22 @@ const StepThreeWrapper = styled.div`
 .title_desc{
   font-size:15px
 }
-// .name_input{
-//   display: flex
-//   flrex-direction: coloum 
-// }
+
 .container{
   text-align: center
 }
+.Cards_div{
+  display:flex;
+}
+.data_1 ,.data_2{
+border: 1px solid #664DE5;
+padding: 20px;
+align-items: center;
+margin : 10px
+}
 `;
 
-const StepThree = (setGoSteps) => {
+const StepThree = ({setGoSteps}) => {
   return (
     <StepThreeWrapper>
       <div className="container">
@@ -30,10 +36,14 @@ const StepThree = (setGoSteps) => {
           <div className="Cards_div">
             <div className="data_1">
             <div><FaUserAlt/></div>
-              <div></div>
-              <div></div>
+              <div>For myself</div>
+              <div>Write better.Think more clearly.Stay organized</div>
             </div>
-            <div className="data_2"></div>
+            <div className="data_2">
+            <div><FaUsers/></div>
+              <div>With my team</div>
+              <div>Wikis,docs,tasks & projects, all in one place.</div>
+            </div>
           </div>
           <button onClick={() => setGoSteps(3)}>Create WorkSpace</button>
         </div>
@@ -42,4 +52,4 @@ const StepThree = (setGoSteps) => {
   );
 };
 
-export default StepThree;
+export default StepThree

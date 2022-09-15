@@ -6,6 +6,7 @@ import StepTwo from "../../components/step-2";
 import StepThree from "../../components/step-3";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import StepFour from "../../components/step-4";
 
 const Dashboard = () => {
   const [goSteps, setGoSteps] = useState(0);
@@ -33,7 +34,9 @@ const Dashboard = () => {
         </div>
         {goSteps === 0 && <StepOne setGoSteps={setGoSteps} />}
         {goSteps === 1 && <StepTwo setGoSteps={setGoSteps} />}
-        {goSteps === 2 && <StepThree />}
+        {goSteps === 2 && <StepThree setGoSteps={setGoSteps} />}
+        {goSteps === 3 && <StepFour setGoSteps={setGoSteps} />}
+
       </div>
       <ToastContainer />
     </DashboardWrapper>
