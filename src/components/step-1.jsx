@@ -63,13 +63,7 @@ const StepOneWrapper = styled.div`
   .top-text {
     text-align: center;
   }
-  .input1 {
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  
   .input {
     width: 70%;
     height: 30px;
@@ -85,7 +79,8 @@ const StepOneWrapper = styled.div`
   
   } .input_div {
     font-size: 10px;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom:5px;
     width: 100%;
     display: flex;
     flex-direction: column;

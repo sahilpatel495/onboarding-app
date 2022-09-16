@@ -7,6 +7,7 @@ import StepThree from "../../components/step-3";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import StepFour from "../../components/step-4";
+import logo from "../../assets/logo_eden.png";
 
 const Dashboard = () => {
   const [goSteps, setGoSteps] = useState(0);
@@ -14,7 +15,10 @@ const Dashboard = () => {
   return (
     <DashboardWrapper>
       <div className="container">
-        <div className="logo">Eden</div>
+        <div className="logo">
+          <img src={logo} className="logo_eden" style={{width:"30px",position: "relative",
+    top: "8px"}} /> <span style={{fontWeight:"900"}}>Eden</span>
+        </div>
         <div className="stepper_div">
           <Stepper
             activeStep={goSteps}
@@ -26,7 +30,12 @@ const Dashboard = () => {
             }}
             stepClassName={"stepper__step"}
           >
-            <Step onClick={() => {setGoSteps(0); notify()}} />  
+            <Step
+              onClick={() => {
+                setGoSteps(0);
+                notify();
+              }}
+            />
             <Step onClick={() => setGoSteps(1)} />
             <Step onClick={() => setGoSteps(2)} />
             <Step onClick={() => setGoSteps(3)} />
@@ -36,7 +45,6 @@ const Dashboard = () => {
         {goSteps === 1 && <StepTwo setGoSteps={setGoSteps} />}
         {goSteps === 2 && <StepThree setGoSteps={setGoSteps} />}
         {goSteps === 3 && <StepFour setGoSteps={setGoSteps} />}
-
       </div>
       <ToastContainer />
     </DashboardWrapper>

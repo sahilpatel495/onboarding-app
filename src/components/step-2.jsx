@@ -13,40 +13,59 @@ const StepTwoWrapper = styled.div`
     font-weight: 500;
     margin: 7px;
   }
-  .name_input {
-    display: flex;
-    flex-direction: column;
-  }
+
   .top-text {
     text-align: center;
   }
-  .input1 {
-    width: 100%;
-    position: relative;
-    display: block;
+
+  .input {
+    width: 70%;
+    height: 30px;
   }
   .step_contents {
     width: 70%;
     margin: 0 auto;
   }
-  .input1_label {
+  label {
+    width: 72%;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .input_div {
     font-size: 10px;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .form_div {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
   }
   .button {
-    width: 70%;
+    width: 72%;
     height: 40px;
     background-color: #664de5;
     border-radius: 4px;
     color: #ffff;
     border: none;
     margin-top: 10px;
+  }
+  .url_div {
+    width: 180px;
+    height: 32px;
+    font-size: 14px;
+    color: "000000";
+    background-color: #f8f9fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #a9a9a9;
   }
 `;
 
@@ -65,34 +84,38 @@ const StepTwo = ({ setGoSteps }) => {
           </div>
         </div>
         <form onSubmit={() => setGoSteps(1)} className="form_div">
-          <div className="input1_label">
+          <div className="input_div">
             <label>Workspace Name</label>
-            <div className="input1">
-              <input
-                type="text"
-                placeholder="Steve Jobs"
-                name="Full name"
-                required
-              />
-            </div>
+            <input
+              type="text"
+              placeholder="Steve Jobs"
+              name="Full name"
+              required
+              className="input"
+            />
           </div>
-          <div className="input1_label">
+          <div className="input_div">
             <label>WorkSpace URL(optional)</label>
-            <div className="input1">
+            <div style={{ display: "flex" }}>
+              <div className="url_div"> www.eden.com/  </div>
               <input
                 type="text"
                 placeholder="Steve"
                 name="Display name"
+                className="input"
                 required
               />
             </div>
           </div>
-          <button onClick={() => setGoSteps(2)} className="button">
+          <button
+            type="submit"
+            onClick={() => setGoSteps(2)}
+            className="button"
+          >
             Create WorkSpace
           </button>
         </form>
       </div>
-      
     </StepTwoWrapper>
   );
 };
