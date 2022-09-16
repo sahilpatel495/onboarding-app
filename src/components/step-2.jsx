@@ -17,7 +17,13 @@ const StepTwoWrapper = styled.div`
   .top-text {
     text-align: center;
   }
-
+  .input1 {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .input {
     width: 70%;
     height: 30px;
@@ -47,6 +53,11 @@ const StepTwoWrapper = styled.div`
     flex-direction: column;
     width: 100%;
   }
+  label{
+    width: 72%;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
   .button {
     width: 72%;
     height: 40px;
@@ -66,6 +77,21 @@ const StepTwoWrapper = styled.div`
     justify-content: center;
     align-items: center;
     border: 1px solid #a9a9a9;
+  }
+  .input_div {
+    font-size: 10px;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
   }
 `;
 
