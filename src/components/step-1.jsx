@@ -82,8 +82,8 @@ const StepOneWrapper = styled.div`
     width: 72%;
     margin-bottom: 5px;
     font-weight: bold;
-  
-  } .input_div {
+  }
+   .input_div {
     font-size: 10px;
     margin-top: 10px;
     width: 100%;

@@ -19,7 +19,6 @@ const StepThreeWrapper = styled.div`
   .data_1,
   .data_2 {
     border: 1px solid #d3d3d3;
-
     padding: 20px;
     align-items: center;
     margin: 10px;

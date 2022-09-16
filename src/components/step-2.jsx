@@ -23,7 +23,13 @@ const StepTwoWrapper = styled.div`
   .input1 {
     width: 100%;
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .input {
+    width: 70%;
+    height: 30px;
   }
   .step_contents {
     width: 70%;
@@ -39,6 +45,11 @@ const StepTwoWrapper = styled.div`
     align-items: center;
     flex-direction: column;
   }
+  label{
+    width: 72%;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
   .button {
     width: 70%;
     height: 40px;
@@ -47,6 +58,21 @@ const StepTwoWrapper = styled.div`
     color: #ffff;
     border: none;
     margin-top: 10px;
+  }
+  .input_div {
+    font-size: 10px;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
   }
 `;
 
@@ -65,29 +91,34 @@ const StepTwo = ({ setGoSteps }) => {
           </div>
         </div>
         <form onSubmit={() => setGoSteps(1)} className="form_div">
-          <div className="input1_label">
+         
+          <div className="input_div">
             <label>Workspace Name</label>
             <div className="input1">
               <input
                 type="text"
-                placeholder="Steve Jobs"
-                name="Full name"
+                placeholder="Eden"
+                name="Workspace Name"
                 required
+                className="input"
               />
             </div>
           </div>
-          <div className="input1_label">
+
+
+          <div className="input_div">
             <label>WorkSpace URL(optional)</label>
             <div className="input1">
               <input
-                type="text"
+                type="url"
                 placeholder="Steve"
                 name="Display name"
                 required
+                className="input"
               />
             </div>
           </div>
-          <button onClick={() => setGoSteps(2)} className="button">
+           <button onClick={() => setGoSteps(2)} className="button">
             Create WorkSpace
           </button>
         </form>
