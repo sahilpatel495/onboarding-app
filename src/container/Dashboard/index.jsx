@@ -15,7 +15,7 @@ const Dashboard = () => {
     <DashboardWrapper>
       <div className="container">
         <div className="logo">Eden</div>
-        <div>
+        <div className="stepper_div">
           <Stepper
             activeStep={goSteps}
             styleConfig={{
@@ -48,17 +48,25 @@ export default Dashboard;
 const DashboardWrapper = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center !important;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  .stepper_div{
+    width: 60%;
+    margin: 0 auto;
+  }
 
   .container {
-    width: 500px;
-    height: 700px;
+    width: 700px;
+
   }
   .logo {
     text-align: center;
   }
   .stepper__step {
-    border: 1px solid #E5E4E2 !important;
+    border: 1px solid #e5e4e2 !important;
     cursor: default !important;
   }
 `;

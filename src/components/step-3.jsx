@@ -3,26 +3,36 @@ import styled from "styled-components";
 import {FaUserAlt,FaUsers} from "react-icons/fa";
 
 const StepThreeWrapper = styled.div`
-.title_head{
-  font-size: 25px
-}
-.title_desc{
-  font-size:15px
-}
+  .title_head {
+    font-size: 25px;
+  }
+  .title_desc {
+    font-size: 15px;
+  }
 
-.container{
-  text-align: center
-}
-.Cards_div{
-  display:flex;
-}
-.data_1 ,.data_2{
-border: 1px solid #D3D3D3;
+  .container {
+    text-align: center;
+  }
+  .Cards_div {
+    display: flex;
+  }
+  .data_1,
+  .data_2 {
+    border: 1px solid #d3d3d3;
 
-padding: 20px;
-align-items: center;
-margin : 10px
-}
+    padding: 20px;
+    align-items: center;
+    margin: 10px;
+  }
+  .button {
+    width: 70%;
+    height: 40px;
+    background-color: #664de5;
+    border-radius: 4px;
+    color: #ffff;
+    border: none;
+    margin-top: 10px;
+  }
 `;
 
 const StepThree = ({setGoSteps}) => {
@@ -46,7 +56,7 @@ const StepThree = ({setGoSteps}) => {
               <div>Wikis,docs,tasks & projects, all in one place.</div>
             </div>
           </div>
-          <button onClick={() => setGoSteps(3)}>Create WorkSpace</button>
+          <button onClick={() => setGoSteps(3)} className="button">Create WorkSpace</button>
         </div>
       </div>
     </StepThreeWrapper>
