@@ -19,7 +19,7 @@ const StepThreeWrapper = styled.div`
   }
   .Cards_div {
     display: flex;
-    width: 70%;
+    width: 65%;
     margin: 0 auto;
     gap: 15px;
   }
