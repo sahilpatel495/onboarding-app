@@ -68,7 +68,7 @@ const StepTwoWrapper = styled.div`
     margin-top: 10px;
   }
   .url_div {
-    width: 180px;
+    width: 162px;
     height: 32px;
     font-size: 14px;
     color: "000000";
